@@ -1,0 +1,62 @@
+{>"layouts/master" /}
+
+{<body}
+<div id="dialog1-form" title="Create new user">
+	<p class="validateTips">All form fields are required.</p>
+
+	<form>
+		<fieldset>
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+			<label for="email">Email</label>
+			<input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+
+			<!-- Allow form submission with keyboard without duplicating the dialog button -->
+			<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+		</fieldset>
+	</form>
+</div>
+
+<div id="dialog2-form" title="Choose a date">
+	<p class="validateTips">All form fields are required.</p>
+
+	<form>
+		<fieldset>
+			<label for="name">Date</label>
+			<input type="date" name="bdate" id="bdate"  class="text ui-widget-content ui-corner-all">
+
+			<!-- Allow form submission with keyboard without duplicating the dialog button -->
+			<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+		</fieldset>
+	</form>
+</div>
+
+
+<div id="users-contain" class="ui-widget">
+	<h1>Existing Users:</h1>
+	<table id="users" class="ui-widget ui-widget-content">
+		<thead>
+			<tr class="ui-widget-header ">
+				<th>Name</th>
+				<th>Email</th>
+				<th>Password</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>John Doe</td>
+				<td><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="0a60656264246e656f4a6f726b677a666f24696567">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></td>
+				<td>johndoe1</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div id="date-contain" class="ui-widget">
+	<h1>Now Date:</h1>
+	<div id="date">Now time is:null</div>
+</div>
+<button id="create-user">Create new user</button>
+<button id="create-date">Choose a date</button>
+{/body}
